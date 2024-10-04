@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved - Neighborhood Watch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+   
+        
+    <nav>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#membership">Membership Registration</a></li>
+            <li><a href="#events">Community Events</a></li>
+            <li><a href="#volunteer">Volunteer Opportunities</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+        <div class="header-content">
+            <img src="https://images.unsplash.com/photo-1616891723424-134e3eaad26d?w=294&dpr=1&h=294&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXRodW1ibmFpbHx8c2N4RmFsckRDVjh8fGVufDB8fHx8fA%3D%3D" alt="Neighborhood Watch Logo" class="logo">
+            <h1>Get Involved</h1>
+           
+        </div>
+     
+   
+        <form id="registrationForm">
+    <section id="membership">
+        <div class="section-header">
+            <h2>Become a Member</h2>
+            <img src="./images/comwatch.jpeg" alt="Membership Image" class="section-image">
+        </div>
+        <p>Join our community to make your neighborhood a safer place. Register now and get involved in various activities tailored to your interests.</p>
+        <form>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="interests">Areas of Interest:</label>
+            <select id="interests" name="interests" multiple required>
+                <option value="patrol">Neighborhood Patrol</option>
+                <option value="events">Organizing Events</option>
+                <option value="awareness">Crime Awareness Programs</option>
+                <option value="communication">Communication and Outreach</option>
+            </select>
+
+            <button type="submit">Register Now</button>
+        </form>
+        <!-- Modal Structure -->
+<div id="successModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>🎉 Woohoo! You're In! 🎉</h2>
+        <p>Welcome to the neighborhood! You've just taken the first step towards making your community safer. 💪</p>
+        <p>We’re super excited to have you on board and can’t wait to see you at our next event. Stay tuned for more updates! 🚀</p>
+        <button id="closeModalButton">Close</button>
+    </div>
+</div>
+    </section>
+        </form>
+
+    <section id="events">
+        <div class="section-header">
+            <h2>Upcoming Community Events</h2>
+            <img src="./images/events.jpg" alt="Events Image" class="section-image">
+        </div>
+        <ul>
+            <li>
+                <h3>Neighborhood Cleanup</h3>
+                <p>Date: September 15, 2024</p>
+                <p>Location: Central Park</p>
+                <p>Description: Join us for a community cleanup event to keep our neighborhood clean and safe.</p>
+            </li>
+            <li>
+                <h3>Safety Workshop</h3>
+                <p>Date: October 5, 2024</p>
+                <p>Location: Community Center</p>
+                <p>Description: Learn essential safety tips and crime prevention strategies.</p>
+            </li>
+            <!-- Add more events as needed -->
+        </ul>
+    </section>
+
+    <section id="volunteer">
+        <div class="section-header">
+            <h2>Volunteer Opportunities</h2>
+            <img src="./images/voluntee.jpg" alt="Volunteer Image" class="section-image" style="max-width: 100%; height: auto; border-radius: 10px;">
+        </div>
+        <p>We are always looking for passionate volunteers to help make our neighborhood safer. Here are some ways you can contribute:</p>
+        <ul>
+            <li>Join our neighborhood patrol team</li>
+            <li>Help organize community events</li>
+            <li>Assist with communication and outreach</li>
+            <li>Contribute to crime awareness programs</li>
+        </ul>
+        <button>Sign Up to Volunteer</button>
+    </section>
+
+    <section id="contact">
+        <div class="section-header">
+            <h2>Contact Us</h2>
+            <img src="https://images.unsplash.com/photo-1592928302149-414bd1c2dff9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDYzfHx3YXRjaHxlbnwwfHx8fDE2OTQyNjM4MDE&ixlib=rb-1.2.1&q=80&w=1080" alt="Contact Image" class="section-image">
+        </div>
+        <p>If you have any questions or would like more information on how to get involved, please reach out to us.</p>
+        <form>
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Neighborhood Watch Platform</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/YourNeighborhoodWatchPage" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="max-width: 50px;">
+                </a>
+                <a href="https://twitter.com/YourNeighborhoodWatchPage" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/6/60/Twitter_Logo_as_of_2021.svg" alt="Twitter" style="max-width: 50px;">
+                </a>
+                <a href="https://www.instagram.com/YourNeighborhoodWatchPage" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="max-width: 50px;">
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="scripts.js"></script>
+    <script>
+        function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show');
+    
+}
+function toggleMenu() {
+    var navLinks = document.getElementById("navLinks");
+    if (navLinks.style.display === "block") {
+        navLinks.style.display = "none";
+    } else {
+        navLinks.style.display = "block";
+    }
+}
+
+
+    </script>
+    
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevent form submission to server
+    
+    // Display the modal
+    document.getElementById('successModal').style.display = 'flex';
+});
+
+// Close modal logic
+document.querySelector('.close-button').addEventListener('click', function() {
+    document.getElementById('successModal').style.display = 'none';
+});
+
+document.getElementById('closeModalButton').addEventListener('click', function() {
+    document.getElementById('successModal').style.display = 'none';
+});
+
+// Optional: Close modal when clicking outside the modal
+window.addEventListener('click', function(event) {
+    if (event.target === document.getElementById('successModal')) {
+        document.getElementById('successModal').style.display = 'none';
+    }
+});
+
+    </script>
+</body>
+
+</html>
+<style>
+    /* Modal default styles (hidden by default) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: bounceIn 0.5s ease;
+}
+
+/* Close button style */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Optional animation for modal */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    80% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+    /* Global Styles */
+/* Basic Navigation Styles */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: #333;
+    padding: 10px;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #1a73e8;
+}
+
+/* Responsive Styles */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+}
+/* General styles for the navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.menu-icon {
+    font-size: 30px;
+    color: white;
+    display: none; /* Initially hidden */
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show menu icon on smaller screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide links initially */
+        flex-direction: column; /* Stack the links vertically */
+        position: absolute;
+        top: 50px; /* Adjust top position based on your nav height */
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Add space between vertical links */
+    }
+
+    .nav-links a {
+        width: 100%; /* Make links take up full width on mobile */
+    }
+
+    /* Show menu when open */
+    .nav-links.show {
+        display: flex;
+    }
+}
+.nav-links {
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+/* Hide the nav items for mobile view */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;  /* Stack items vertically */
+        display: none;  /* Initially hide the menu */
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;  /* Show menu icon on small screens */
+        text-align: right;
+        background-color: #333;
+    }
+
+    nav ul.show {
+        display: flex;  /* Show menu when clicked */
+    }
+}
+
+/* Navigation Styles */
+nav ul {
+    display: flex;
+    justify-content: center;  /* Center the items */
+    list-style: none;
+    background-color: #333;  /* Dark background for the nav */
+  
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;  /* Spacing between each nav item */
+}
+
+nav ul li a {
+    color: #fff;  /* White text color */
+    text-decoration: none;  /* Remove underline */
+    padding: 10px 20px;  /* Add padding for better clickable area */
+    border-radius: 5px;  /* Rounded corners */
+    transition: background-color 0.3s ease;  /* Smooth hover effect */
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #1a73e8;  /* Blue background on hover or active */
+}
+
+
+body {
+    font-family:'Times New Roman', Times, serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header Styles */
+.top-bar {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+/* Header Content */
+.header-content {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header-content .logo {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.header-content h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.header-content h2 {
+    font-size: 1.8em;
+    color: #555;
+}
+
+/* Section Styles */
+section {
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 2em;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.section-header .section-image {
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+/* Form Styles */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* List Styles */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+ul li h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+ul li p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Button Styles */
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+footer .social-media {
+    margin-top: 20px;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+}
+
+footer .social-media img {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+footer .social-media img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    form {
+        margin-top: 15px;
+    }
+
+    .header-content h1 {
+        font-size: 2em;
+    }
+
+    .header-content h2 {
+        font-size: 1.4em;
+    }
+
+    ul li {
+        padding: 10px;
+    }
+}
+
+</style>
