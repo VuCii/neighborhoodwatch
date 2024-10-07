@@ -11,29 +11,69 @@
 <body>
    
         
-    <nav>
-        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#membership">Membership Registration</a></li>
-            <li><a href="#events">Community Events</a></li>
-            <li><a href="#volunteer">Volunteer Opportunities</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
-    </nav>
-    
-        <div class="header-content">
-            <img src="https://images.unsplash.com/photo-1616891723424-134e3eaad26d?w=294&dpr=1&h=294&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXRodW1ibmFpbHx8c2N4RmFsckRDVjh8fGVufDB8fHx8fA%3D%3D" alt="Neighborhood Watch Logo" class="logo">
-            <h1>Get Involved</h1>
-           
+    <nav class="topnav">
+        <a href="#home" class="active"><i class="fas fa-home"></i> Neighborhoodwatch</a>
+        <div id="navLinks" class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#membership">Membership Registration</a></li>
+                <li><a href="#events">Community Events</a></li>
+                <li><a href="#volunteer">Volunteer Opportunities</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
         </div>
-     
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+    </nav>
+    <style>
+        .topnav .nav-links {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .topnav .nav-links ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .topnav .nav-links li {
+            margin: 0 10px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav .nav-links {
+                display: none; /* Hide links by default on mobile */
+                flex-direction: column;
+                width: 100%;
+                background-color: #333;
+            }
+
+            .topnav .nav-links.show {
+                display: flex; /* Show links when toggled */
+            }
+
+            .topnav .icon {
+                display: block; /* Show the menu icon on mobile */
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('show');
+        }
+    </script>
+        <div class="header-content">
+           
+            <h1>Get Involved</h1>
+        </div>
    
         <form id="registrationForm">
     <section id="membership">
         <div class="section-header">
-            <h2>Become a Member</h2>
-            <img src="./images/comwatch.jpeg" alt="Membership Image" class="section-image">
+
+            <img src="images\member.jpg" alt="Membership Image" class="section-image">
         </div>
         <p>Join our community to make your neighborhood a safer place. Register now and get involved in various activities tailored to your interests.</p>
         <form>
@@ -126,14 +166,14 @@
         <div class="footer-content">
             <p>&copy; 2024 Neighborhood Watch Platform</p>
             <div class="social-media">
-                <a href="https://www.facebook.com/YourNeighborhoodWatchPage" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="max-width: 50px;">
+                <a href="https://www.facebook.com/YourNeighborhoodWatchPage" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook" style="font-size: 50px; color: #3b5998;"></i>
                 </a>
-                <a href="https://twitter.com/YourNeighborhoodWatchPage" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/6/60/Twitter_Logo_as_of_2021.svg" alt="Twitter" style="max-width: 50px;">
+                <a href="https://twitter.com/YourNeighborhoodWatchPage" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter" style="font-size: 50px; color: #1DA1F2;"></i>
                 </a>
-                <a href="https://www.instagram.com/YourNeighborhoodWatchPage" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="max-width: 50px;">
+                <a href="https://www.instagram.com/YourNeighborhoodWatchPage" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram" style="font-size: 50px; color: #C13584;"></i>
                 </a>
             </div>
         </div>

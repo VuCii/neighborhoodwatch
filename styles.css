@@ -1,0 +1,36 @@
+/* ... existing styles ... */
+
+#safety-tips .safety-tips-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#safety-tips img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#safety-tips .safety-tips-content {
+    flex: 1;
+}
+
+#safety-tips p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+#safety-tips button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ... continue moving other inline styles ... */
